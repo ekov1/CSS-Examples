@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .parent {
+            background-color: midnightblue;
+            height: 800px;
+            width: 800px;
+        }
+
+        .child {
+            background-color: maroon;
+            height: 50%;
+            width: 50%;
+        }
+
+        .parent:hover .child {
+            animation: left-to-right 5s ease-in forwards 3 alternate;
+        }
+
+        @keyframes left-to-right {
+            0% {
+                transform: translateX(0);
+            }
+
+            33% {
+                transform: translateY(100%);
+                border-radius: 15%;
+            }
+
+            66% {
+                transform: translateX(100%) translateY(100%);
+                border-radius: 35%;
+            }
+
+            100% {
+                transform: translateX(100%);
+                background-color: limegreen;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>
